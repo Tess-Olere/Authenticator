@@ -4,6 +4,8 @@ const bcrypt = require('bcrypt');
 //integrate views
 // authentication - jsonwebtoken
 
+
+
 const register = async (req, res) => {
     const { email, password } = req.body;
     // make sure they provide email and password

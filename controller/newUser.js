@@ -1,5 +1,6 @@
 const Users = require('../model/user')
-const bcrypt = require('bcrypt')
+const bcrypt = require('bcrypt');
+const { application } = require('express');
 
 const handleErrors = (err) => {
     // err messages and err codes - 11000
@@ -25,8 +26,20 @@ const handleErrors = (err) => {
     return errors;
 };
 
+const getregisterpage = (req, res)=>{
+    res.render('signUp')
+}
+
+const getloginpage = (req, res)=>{
+    res.render('login')
+}
+
+const getdashboard = (req, res)=>{
+    res.render('dashboard')
+}
+
 const register = async (req, res) => {
-    const { email, password } = req.body
+  const { email, password } = req.body
     try {
         // const user info
         // create the user on the data base
@@ -60,4 +73,4 @@ const login = async (req, res) => {
     }
 }
 
-module.exports = { register, login }
+module.exports = { register, login, getregisterpage, getloginpage, getdashboard}
