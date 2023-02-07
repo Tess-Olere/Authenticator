@@ -4,14 +4,15 @@ const app = express();
 const PORT = 3000;
 const mongoose = require('mongoose');
 const notFound = require('./middleware/notFound')
-const userRouter = require('./routes/userRouter')
+//const userRouter = require('./routes/userRouter')
+const newRouter = require('./routes/newUserRouter');
 mongoose.set('strictQuery', true);
 
 // middleware
 app.use(express.json())
 
 // routes
-app.use(userRouter)
+app.use(newRouter)
 
 // error found
 app.use(notFound)

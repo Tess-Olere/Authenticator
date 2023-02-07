@@ -1,1 +1,9 @@
 Hashing Algorithms (sensitive information )
+
+refractring
+error handling
+mongoose hook (middleware)
+
+authentication(session based(cookies) and token based)
+protecting route using authentication
+integration ejs views
