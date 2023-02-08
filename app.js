@@ -12,6 +12,7 @@ mongoose.set('strictQuery', true);
 app.set("view engine", "ejs");
 // middleware
 app.use(express.json())
+app.use(express.urlencoded({ extended: true }))
 
 // routes
 app.use(newRouter)

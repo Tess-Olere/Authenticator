@@ -69,7 +69,7 @@ const login = async (req, res) => {
         throw Error('User not registered yet')
     } catch (error) {
         const errors = handleErrors(error)
-        res.status(400).json({errors})
+        res.status(400).json({success: false, errors})
     }
 }
 
