@@ -14,6 +14,11 @@
             <li><a href="/dashboard">Dashboard</a></li>
         </ul>
     </nav>
+    
     <h1>Welcome on board</h1>
+    <% if (email){ %>
+        <h1>Welcome <%= email %></h1>
+    <%}%>
+    <a href="/logout">Log Out</a>
 </body>
 </html>
